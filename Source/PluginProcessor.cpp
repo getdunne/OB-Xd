@@ -987,7 +987,7 @@ File ObxdAudioProcessor::getCurrentBankFile() const
 //==============================================================================
 File ObxdAudioProcessor::getDocumentFolder() const
 {
-	File folder = File::getSpecialLocation(File::userDocumentsDirectory).getChildFile("discoDSP").getChildFile("OB-Xd");
+	File folder = File::getSpecialLocation(File::commonDocumentsDirectory).getChildFile("discoDSP").getChildFile("OB-Xd");
 	if (folder.isSymbolicLink())
 		folder = folder.getLinkedTarget();
 	return folder;
